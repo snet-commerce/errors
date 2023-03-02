@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "github.com/snet-commerce/errors/proto";
+
+message Violation {
+  string reason = 1;
+  string message = 2;
+}
+
+message Error {
+  string code = 1;
+  string message = 2;
+  repeated Violation errors = 3;
+}
