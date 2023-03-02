@@ -12,8 +12,8 @@ type Error struct {
 	errors  []violation
 }
 
-// NewError constructs Error
-func NewError(code, message string, violations ...violation) *Error {
+// New constructs Error
+func New(code, message string, violations ...violation) *Error {
 	if len(violations) == 0 {
 		violations = make([]violation, 0)
 	}
